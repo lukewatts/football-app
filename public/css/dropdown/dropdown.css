@@ -1,0 +1,67 @@
+.cd-dropdown ul {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+.cd-dropdown > span,
+.cd-dropdown ul li {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.cd-dropdown ul li {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+}
+
+.cd-active.cd-dropdown > span {
+	color: hsl(23, 80%, 51%); /* Orange */
+}
+
+.cd-active.cd-dropdown ul li {
+	pointer-events: auto;
+}
+
+.cd-active.cd-dropdown ul li span {
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+	background: hsl(23, 80%, 51%); /* Orange */
+	color: #fff;
+}
+
+.choice-submit {
+	/* Dimensioning */
+	line-height: 4rem;
+	width: 300px;
+
+	/* Positioning */
+	/*position: relative;*/
+	/*left: 50%;*/
+	/*margin-left: -150px;*/
+
+	/* Theming */
+	font-size: 16px;
+}
+
+.choice-submit:hover {
+	color: hsl(216, 8%, 25%);
+}
+
+@media (max-width: 320px) {
+	.cd-dropdown,
+	.cd-select, .cd-dropdown li, .choice-submit {
+		max-width: 290px !important;
+	}
+
+	.choice-submit {
+		left: 0px;
+		margin-left: 0px;
+	}
+}
